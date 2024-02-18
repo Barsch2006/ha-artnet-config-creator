@@ -1,13 +1,41 @@
-# this is just an example file to show how the configuration file should look like
-# credits: https://github.com/danielweidenauer/hass-artnet
+# this is just an example by https://github.com/Breina/ha-artnet-led/blob/main/README.md
 light:
-  - platform: artnet
-    host: 255.255.255.255
-    port: 6454
-    dmx_channels: 512
-    default_level: 0
-    devices:
-      - channel: 1
-        name: Dimmer 1
-        type: dimmer
-        default_level: 0
+- platform: artnet_led
+  host: IP                              # IP of Art-Net Node
+  max_fps: 25                           # Max 40 per second
+  refresh_every: 0                      # Resend values if no fades are running every x seconds, 0 disables automatic refresh
+  node_type: artnet-direct              # Which protocol to use
+  universes:                            # Support for multiple universes
+    0:                                  # Nr of Universe (see configuration of your Art-Net Node)
+      send_partial_universe: True       # Only send the universe which contains data
+      output_correction: quadratic      # optional: output correction for the whole universe, will be used as default if nothing is set for the channel
+      devices:
+        # Dimmer
+        - channel: 1                    # first channel of dmx dimmer
+          name: my_dimmer               # name
+          type: dimmer                  # type
+          transition: 1                 # default duration of fades in sec. Will be overridden by Transition sent from HA
+          output_correction: quadratic  # optional: quadratic, cubic or quadruple. Apply different dimming curves to the output. Default is None which means linear dimming
+          channel_size: 16bit           # width of the channel sent to DMX device, default "8bit", "16bit", "24bit" and "32bit" available.
+        - channel: 3
+          name: my_rgb_lamp
+          type: rgb
+          transition: 1
+          channel_size: 16bit
+          output_correction: quadratic
+          channel_setup: rbgw           # Auto-calculated white channel
+        - channel: 125
+          type: color_temp
+          name: "my_color_temp_lamp"
+          min_temp: 2500K
+          max_temp: 6500K
+          channel_setup: ch
+        - channel: 41
+          type: rgbww
+          name: my_rgbww_lamp
+          transition: 10
+        - channel: 50
+          name: sp4led_1_dimmer
+          type: fixed
+          channel_setup:
+            - 255
