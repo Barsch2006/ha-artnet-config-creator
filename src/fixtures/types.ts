@@ -80,8 +80,7 @@ interface ISingleChannel {
 
 type YAMLChannel = `    - channel: ${number}
       name: ${string}_${number}_${string}
-      type: dimmer
-      default_level: ${number}`;
+      type: dimmer`;
 
 abstract class Fixture {
   startDMX: number;
@@ -103,8 +102,7 @@ abstract class Fixture {
     return channelNames.map((name, index): YAMLChannel => {
       return `    - channel: ${this.startDMX + index}
       name: ${this.type}_${this.startDMX}_${name}
-      type: dimmer
-      default_level: ${this.channels[name]}`;
+      type: dimmer`;
     });
   }
 }

@@ -8,12 +8,16 @@ const sortedPatchArray: Fixture[] = patchArray.sort(
 );
 
 const startYAML = `light:
-- platform: artnet
+- platform: artnet_led
   host: 255.255.255.255
-  port: 6454
-  dmx_channels: 512 
-  default_level: 0
-  devices:
+  max_fps: 40
+  refresh_every: 0
+  node_type: artnet-direct
+  universes:
+    0:
+      send_partial_universe: True
+      output_correction: linear
+      devices:
 `;
 
 const devicesYAML: YAMLChannel[] = sortedPatchArray
