@@ -25,4 +25,4 @@ const devicesYAML: YAMLChannel[] = sortedPatchArray
 // concat the startYAML and devicesYAML
 const finalYAML = `${startYAML} ${devicesYAML.join("\n")}`;
 if (!existsSync("output")) mkdirSync("output");
-writeFileSync("output/lights.yaml", finalYAML);
+writeFileSync("output/light.yaml", finalYAML);
