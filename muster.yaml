@@ -1,0 +1,13 @@
+# this is just an example file to show how the configuration file should look like
+# credits: https://github.com/danielweidenauer/hass-artnet
+light:
+  - platform: artnet
+    host: 255.255.255.255
+    port: 6454
+    dmx_channels: 512
+    default_level: 0
+    devices:
+      - channel: 1
+        name: Dimmer 1
+        type: dimmer
+        default_level: 0
