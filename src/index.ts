@@ -1,6 +1,6 @@
 import patchArray from "./fixtures/patch";
 import { Fixture, YAMLChannel } from "./fixtures/types";
-import { writeFileSync } from "fs";
+import { mkdirSync, writeFileSync, existsSync } from "fs";
 
 // sort the patchArray by startDMX
 const sortedPatchArray: Fixture[] = patchArray.sort(
@@ -24,4 +24,5 @@ const devicesYAML: YAMLChannel[] = sortedPatchArray
 
 // concat the startYAML and devicesYAML
 const finalYAML = `${startYAML} ${devicesYAML.join("\n")}`;
-writeFileSync("output.yaml", finalYAML);
+if (!existsSync("output")) mkdirSync("output");
+writeFileSync("output/lights.yaml", finalYAML);
