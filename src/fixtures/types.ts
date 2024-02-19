@@ -78,9 +78,25 @@ interface ISingleChannel {
   };
 }
 
-type YAMLChannel = `    - channel: ${number}
-      name: ${string}_${number}_${string}
-      type: dimmer`;
+type FixtureType = "SingleChannel" | "CWWW" | "MHX200" | "MHZ1915" | "PAR64" | "W648";
+type YAMLChannelType = "dimmer" | "binary" | "rgb" | "rgbw" | "color_temp";
+/**
+ * @typedef {string} YAMLChannelName - The name of the channel
+ * FixtureType_startDMX_channelsKey
+ */
+type YAMLChannelName = `${FixtureType}_${number}_${string}`;
+type ChannelSize = "16bit" | "8bit";
+
+type YAMLChannelDefault = `    - channel: ${number}
+      name: ${YAMLChannelName}
+      transition: 0
+      type: ${YAMLChannelType}`;
+type YAMLChannelExtended = `    - channel: ${number}
+      name: ${YAMLChannelName}
+      type: ${YAMLChannelType}
+      transition: 0
+      size: ${ChannelSize}`;
+type YAMLChannel = YAMLChannelDefault | YAMLChannelExtended;
 
 abstract class Fixture {
   startDMX: number;
@@ -95,16 +111,7 @@ abstract class Fixture {
   /**
    * @returns {YAMLChannel[]} - Returns an array of YAMLChannel objects (strings)
    */
-  toYAML(): YAMLChannel[] {
-    // get all channel names
-    const channelNames = Object.keys(this.channels);
-    // create YAMLChannel object for each channel
-    return channelNames.map((name, index): YAMLChannel => {
-      return `    - channel: ${this.startDMX + index}
-      name: ${this.type}_${this.startDMX}_${name}
-      type: dimmer`;
-    });
-  }
+  abstract toYAML(): YAMLChannel[];
 }
 
 class SingleChannel extends Fixture implements ISingleChannel {
@@ -114,6 +121,15 @@ class SingleChannel extends Fixture implements ISingleChannel {
 
   constructor(startDMX: number) {
     super(startDMX, "SingleChannel");
+  }
+
+  toYAML(): YAMLChannel[] {
+    return [
+      `    - channel: ${this.startDMX}
+      name: SingleChannel_${this.startDMX}_dimmer
+      transition: 0
+      type: binary`
+    ];
   }
 }
 
@@ -128,6 +144,27 @@ class CWWW extends Fixture implements ICWWW {
 
   constructor(startDMX: number) {
     super(startDMX, "CWWW");
+  }
+
+  toYAML(): YAMLChannel[] {
+      return [
+        `    - channel: ${this.startDMX}
+      name: CWWW_${this.startDMX}_cwww
+      transition: 0
+      type: color_temp`,
+        `    - channel: ${this.startDMX + 2}
+      name: CWWW_${this.startDMX + 2}_dimmer
+      transition: 0
+      type: dimmer`,
+        `    - channel: ${this.startDMX + 3}
+      name: CWWW_${this.startDMX + 3}_strobe
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 4}
+      name: CWWW_${this.startDMX + 4}_color_temp
+      transition: 0
+      type: dimmer`,
+      ];
   }
 }
 
@@ -154,6 +191,75 @@ class MHX200 extends Fixture implements IMHX200 {
   constructor(startDMX: number) {
     super(startDMX, "MHX200");
   }
+
+  toYAML(): YAMLChannel[] {
+      return [
+        `    - channel: ${this.startDMX}
+      name: MHX200_${this.startDMX}_pan
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 1}
+      name: MHX200_${this.startDMX + 1}_tilt
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 2}
+      name: MHX200_${this.startDMX + 2}_pan_fine
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 3}
+      name: MHX200_${this.startDMX + 3}_tilt_fine
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 4}
+      name: MHX200_${this.startDMX + 4}_speed
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 5}
+      name: MHX200_${this.startDMX + 5}_color
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 6}
+      name: MHX200_${this.startDMX + 6}_shutter
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 7}
+      name: MHX200_${this.startDMX + 7}_dimmer
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 8}
+      name: MHX200_${this.startDMX + 8}_gobo1
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 9}
+      name: MHX200_${this.startDMX + 9}_gobo1_rotation
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 10}
+      name: MHX200_${this.startDMX + 10}_gobo2
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 11}
+      name: MHX200_${this.startDMX + 11}_focus
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 12}
+      name: MHX200_${this.startDMX + 12}_iris
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 13}
+      name: MHX200_${this.startDMX + 13}_prism
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 14}
+      name: MHX200_${this.startDMX + 14}_function
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 15}
+      name: MHX200_${this.startDMX + 15}_effect
+      transition: 0
+      type: dimmer`,
+      ];
+  }
 }
 
 class MHZ1915 extends Fixture implements IMHZ1915 {
@@ -177,6 +283,55 @@ class MHZ1915 extends Fixture implements IMHZ1915 {
   constructor(startDMX: number) {
     super(startDMX, "MHZ1915");
   }
+
+  toYAML(): YAMLChannel[] {
+      return [
+        `    - channel: ${this.startDMX}
+      name: MHZ1915_${this.startDMX}_pan
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 1}
+      name: MHZ1915_${this.startDMX + 1}_tilt
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 2}
+      name: MHZ1915_${this.startDMX + 2}_speed
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 3}
+      name: MHZ1915_${this.startDMX + 3}_rgbw
+      transition: 0
+      type: rgbw`,
+      `    - channel: ${this.startDMX + 7}
+      name: MHZ1915_${this.startDMX + 7}_effect
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 8}
+      name: MHZ1915_${this.startDMX + 8}_effect_speed
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 9}
+      name: MHZ1915_${this.startDMX + 9}_dimmer
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 10}
+      name: MHZ1915_${this.startDMX + 10}_shutter
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 11}
+      name: MHZ1915_${this.startDMX + 11}_zoom
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 12}
+      name: MHZ1915_${this.startDMX + 12}_functions
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 13}
+      name: MHZ1915_${this.startDMX + 13}_move_effect
+      transition: 0
+      type: dimmer`,
+      ];
+  }
 }
 
 class PAR64 extends Fixture implements IPAR64 {
@@ -194,6 +349,31 @@ class PAR64 extends Fixture implements IPAR64 {
   constructor(startDMX: number) {
     super(startDMX, "PAR64");
   }
+
+  toYAML(): YAMLChannel[] {
+      return [
+        `    - channel: ${this.startDMX}
+      name: PAR64_${this.startDMX}_rgbw
+      transition: 0
+      type: rgbw`,
+      `    - channel: ${this.startDMX + 4}
+      name: PAR64_${this.startDMX + 4}_cto
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 5}
+      name: PAR64_${this.startDMX + 5}_shutter
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 6}
+      name: PAR64_${this.startDMX + 6}_func
+      transition: 0
+      type: binary`,
+      `    - channel: ${this.startDMX + 7}
+      name: PAR64_${this.startDMX + 7}_dimmer
+      transition: 0
+      type: dimmer`,
+      ];
+  }
 }
 
 class W648 extends Fixture implements IW648 {
@@ -208,6 +388,27 @@ class W648 extends Fixture implements IW648 {
 
   constructor(startDMX: number) {
     super(startDMX, "W648");
+  }
+
+  toYAML(): YAMLChannel[] {
+      return [
+        `    - channel: ${this.startDMX}
+      name: W648_${this.startDMX}_dimmer
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 1}
+      name: W648_${this.startDMX + 1}_shutter
+      transition: 0
+      type: dimmer`,
+      `    - channel: ${this.startDMX + 2}
+      name: W648_${this.startDMX + 2}_rgb
+      transition: 0
+      type: rgb`,
+      `    - channel: ${this.startDMX + 5}
+      name: W648_${this.startDMX + 5}_function
+      transition: 0
+      type: binary`,
+      ];
   }
 }
 
