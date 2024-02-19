@@ -9,9 +9,9 @@ const sortedPatchArray: Fixture[] = patchArray.sort(
 
 const startYAML = `light:
 - platform: artnet_led
-  host: 255.255.255.255
-  max_fps: 40
-  refresh_every: 0
+  host: 192.168.1.55
+  max_fps: 25 # Max 40 per second
+  # refresh_every: 0
   node_type: artnet-direct
   universes:
     0:
