@@ -13,623 +13,623 @@ light:
         name: SingleChannel_1_dimmer
         transition: 0
         type: binary
-     - channel: 2
+      - channel: 2
         name: SingleChannel_2_dimmer
         transition: 0
         type: binary
-     - channel: 3
+      - channel: 3
         name: SingleChannel_3_dimmer
         transition: 0
         type: binary
-     - channel: 4
+      - channel: 4
         name: SingleChannel_4_dimmer
         transition: 0
         type: binary
-     - channel: 5
+      - channel: 5
         name: SingleChannel_5_dimmer
         transition: 0
         type: binary
-     - channel: 6
+      - channel: 6
         name: SingleChannel_6_dimmer
         transition: 0
         type: binary
-     - channel: 7
+      - channel: 7
         name: SingleChannel_7_dimmer
         transition: 0
         type: binary
-     - channel: 8
+      - channel: 8
         name: SingleChannel_8_dimmer
         transition: 0
         type: binary
-     - channel: 9
+      - channel: 9
         name: SingleChannel_9_dimmer
         transition: 0
         type: binary
-     - channel: 10
+      - channel: 10
         name: SingleChannel_10_dimmer
         transition: 0
         type: binary
-     - channel: 11
+      - channel: 11
         name: SingleChannel_11_dimmer
         transition: 0
         type: binary
-     - channel: 12
+      - channel: 12
         name: SingleChannel_12_dimmer
         transition: 0
         type: binary
-     - channel: 13
+      - channel: 13
         name: SingleChannel_13_dimmer
         transition: 0
         type: binary
-     - channel: 14
+      - channel: 14
         name: SingleChannel_14_dimmer
         transition: 0
         type: binary
-     - channel: 15
+      - channel: 15
         name: SingleChannel_15_dimmer
         transition: 0
         type: binary
-     - channel: 16
+      - channel: 16
         name: SingleChannel_16_dimmer
         transition: 0
         type: binary
-     - channel: 17
+      - channel: 17
         name: SingleChannel_17_dimmer
         transition: 0
         type: binary
-     - channel: 18
+      - channel: 18
         name: SingleChannel_18_dimmer
         transition: 0
         type: binary
-     - channel: 19
+      - channel: 19
         name: SingleChannel_19_dimmer
         transition: 0
         type: binary
-     - channel: 20
+      - channel: 20
         name: SingleChannel_20_dimmer
         transition: 0
         type: binary
-     - channel: 21
+      - channel: 21
         name: SingleChannel_21_dimmer
         transition: 0
         type: binary
-     - channel: 22
+      - channel: 22
         name: SingleChannel_22_dimmer
         transition: 0
         type: binary
-     - channel: 23
+      - channel: 23
         name: SingleChannel_23_dimmer
         transition: 0
         type: binary
-     - channel: 24
+      - channel: 24
         name: SingleChannel_24_dimmer
         transition: 0
         type: binary
-     - channel: 25
+      - channel: 25
         name: MHX200_25_pan
         transition: 0
         type: dimmer
-     - channel: 26
+      - channel: 26
         name: MHX200_25_tilt
         transition: 0
         type: dimmer
-     - channel: 27
+      - channel: 27
         name: MHX200_25_pan_fine
         transition: 0
         type: dimmer
-     - channel: 28
+      - channel: 28
         name: MHX200_25_tilt_fine
         transition: 0
         type: dimmer
-     - channel: 29
+      - channel: 29
         name: MHX200_25_speed
         transition: 0
         type: dimmer
-     - channel: 30
+      - channel: 30
         name: MHX200_25_color
         transition: 0
         type: dimmer
-     - channel: 31
+      - channel: 31
         name: MHX200_25_shutter
         transition: 0
         type: dimmer
-     - channel: 32
+      - channel: 32
         name: MHX200_25_dimmer
         transition: 0
         type: dimmer
-     - channel: 33
+      - channel: 33
         name: MHX200_25_gobo1
         transition: 0
         type: dimmer
-     - channel: 34
+      - channel: 34
         name: MHX200_25_gobo1_rotation
         transition: 0
         type: dimmer
-     - channel: 35
+      - channel: 35
         name: MHX200_25_gobo2
         transition: 0
         type: dimmer
-     - channel: 36
+      - channel: 36
         name: MHX200_25_focus
         transition: 0
         type: dimmer
-     - channel: 37
+      - channel: 37
         name: MHX200_25_iris
         transition: 0
         type: dimmer
-     - channel: 38
+      - channel: 38
         name: MHX200_25_prism
         transition: 0
         type: dimmer
-     - channel: 39
+      - channel: 39
         name: MHX200_25_function
         transition: 0
         type: dimmer
-     - channel: 40
+      - channel: 40
         name: MHX200_25_effect
         transition: 0
         type: dimmer
-     - channel: 41
+      - channel: 41
         name: MHX200_41_pan
         transition: 0
         type: dimmer
-     - channel: 42
+      - channel: 42
         name: MHX200_41_tilt
         transition: 0
         type: dimmer
-     - channel: 43
+      - channel: 43
         name: MHX200_41_pan_fine
         transition: 0
         type: dimmer
-     - channel: 44
+      - channel: 44
         name: MHX200_41_tilt_fine
         transition: 0
         type: dimmer
-     - channel: 45
+      - channel: 45
         name: MHX200_41_speed
         transition: 0
         type: dimmer
-     - channel: 46
+      - channel: 46
         name: MHX200_41_color
         transition: 0
         type: dimmer
-     - channel: 47
+      - channel: 47
         name: MHX200_41_shutter
         transition: 0
         type: dimmer
-     - channel: 48
+      - channel: 48
         name: MHX200_41_dimmer
         transition: 0
         type: dimmer
-     - channel: 49
+      - channel: 49
         name: MHX200_41_gobo1
         transition: 0
         type: dimmer
-     - channel: 50
+      - channel: 50
         name: MHX200_41_gobo1_rotation
         transition: 0
         type: dimmer
-     - channel: 51
+      - channel: 51
         name: MHX200_41_gobo2
         transition: 0
         type: dimmer
-     - channel: 52
+      - channel: 52
         name: MHX200_41_focus
         transition: 0
         type: dimmer
-     - channel: 53
+      - channel: 53
         name: MHX200_41_iris
         transition: 0
         type: dimmer
-     - channel: 54
+      - channel: 54
         name: MHX200_41_prism
         transition: 0
         type: dimmer
-     - channel: 55
+      - channel: 55
         name: MHX200_41_function
         transition: 0
         type: dimmer
-     - channel: 56
+      - channel: 56
         name: MHX200_41_effect
         transition: 0
         type: dimmer
-     - channel: 61
+      - channel: 61
         name: MHZ1915_61_pan
         transition: 0
         type: dimmer
-     - channel: 62
+      - channel: 62
         name: MHZ1915_61_tilt
         transition: 0
         type: dimmer
-     - channel: 63
+      - channel: 63
         name: MHZ1915_61_speed
         transition: 0
         type: dimmer
-     - channel: 64
+      - channel: 64
         name: MHZ1915_61_rgbw
         transition: 0
         type: rgbw
-     - channel: 68
+      - channel: 68
         name: MHZ1915_61_effect
         transition: 0
         type: dimmer
-     - channel: 69
+      - channel: 69
         name: MHZ1915_61_effect_speed
         transition: 0
         type: dimmer
-     - channel: 70
+      - channel: 70
         name: MHZ1915_61_dimmer
         transition: 0
         type: dimmer
-     - channel: 71
+      - channel: 71
         name: MHZ1915_61_shutter
         transition: 0
         type: dimmer
-     - channel: 72
+      - channel: 72
         name: MHZ1915_61_zoom
         transition: 0
         type: dimmer
-     - channel: 73
+      - channel: 73
         name: MHZ1915_61_functions
         transition: 0
         type: dimmer
-     - channel: 74
+      - channel: 74
         name: MHZ1915_61_move_effect
         transition: 0
         type: dimmer
-     - channel: 100
+      - channel: 100
         name: CWWW_100_cwww
         transition: 0
         type: color_temp
-     - channel: 102
+      - channel: 102
         name: CWWW_100_dimmer
         transition: 0
         type: dimmer
-     - channel: 103
+      - channel: 103
         name: CWWW_100_strobe
         transition: 0
         type: dimmer
-     - channel: 104
+      - channel: 104
         name: CWWW_100_color_temp
         transition: 0
         type: dimmer
-     - channel: 105
+      - channel: 105
         name: CWWW_105_cwww
         transition: 0
         type: color_temp
-     - channel: 107
+      - channel: 107
         name: CWWW_105_dimmer
         transition: 0
         type: dimmer
-     - channel: 108
+      - channel: 108
         name: CWWW_105_strobe
         transition: 0
         type: dimmer
-     - channel: 109
+      - channel: 109
         name: CWWW_105_color_temp
         transition: 0
         type: dimmer
-     - channel: 134
+      - channel: 134
         name: MHZ1915_134_pan
         transition: 0
         type: dimmer
-     - channel: 135
+      - channel: 135
         name: MHZ1915_134_tilt
         transition: 0
         type: dimmer
-     - channel: 136
+      - channel: 136
         name: MHZ1915_134_speed
         transition: 0
         type: dimmer
-     - channel: 137
+      - channel: 137
         name: MHZ1915_134_rgbw
         transition: 0
         type: rgbw
-     - channel: 141
+      - channel: 141
         name: MHZ1915_134_effect
         transition: 0
         type: dimmer
-     - channel: 142
+      - channel: 142
         name: MHZ1915_134_effect_speed
         transition: 0
         type: dimmer
-     - channel: 143
+      - channel: 143
         name: MHZ1915_134_dimmer
         transition: 0
         type: dimmer
-     - channel: 144
+      - channel: 144
         name: MHZ1915_134_shutter
         transition: 0
         type: dimmer
-     - channel: 145
+      - channel: 145
         name: MHZ1915_134_zoom
         transition: 0
         type: dimmer
-     - channel: 146
+      - channel: 146
         name: MHZ1915_134_functions
         transition: 0
         type: dimmer
-     - channel: 147
+      - channel: 147
         name: MHZ1915_134_move_effect
         transition: 0
         type: dimmer
-     - channel: 150
+      - channel: 150
         name: PAR64_150_rgbw
         transition: 0
         type: rgbw
-     - channel: 154
+      - channel: 154
         name: PAR64_150_cto
         transition: 0
         type: dimmer
-     - channel: 155
+      - channel: 155
         name: PAR64_150_shutter
         transition: 0
         type: dimmer
-     - channel: 156
+      - channel: 156
         name: PAR64_150_func
         transition: 0
         type: binary
-     - channel: 157
+      - channel: 157
         name: PAR64_150_dimmer
         transition: 0
         type: dimmer
-     - channel: 158
+      - channel: 158
         name: PAR64_158_rgbw
         transition: 0
         type: rgbw
-     - channel: 162
+      - channel: 162
         name: PAR64_158_cto
         transition: 0
         type: dimmer
-     - channel: 163
+      - channel: 163
         name: PAR64_158_shutter
         transition: 0
         type: dimmer
-     - channel: 164
+      - channel: 164
         name: PAR64_158_func
         transition: 0
         type: binary
-     - channel: 165
+      - channel: 165
         name: PAR64_158_dimmer
         transition: 0
         type: dimmer
-     - channel: 166
+      - channel: 166
         name: PAR64_166_rgbw
         transition: 0
         type: rgbw
-     - channel: 170
+      - channel: 170
         name: PAR64_166_cto
         transition: 0
         type: dimmer
-     - channel: 171
+      - channel: 171
         name: PAR64_166_shutter
         transition: 0
         type: dimmer
-     - channel: 172
+      - channel: 172
         name: PAR64_166_func
         transition: 0
         type: binary
-     - channel: 173
+      - channel: 173
         name: PAR64_166_dimmer
         transition: 0
         type: dimmer
-     - channel: 174
+      - channel: 174
         name: PAR64_174_rgbw
         transition: 0
         type: rgbw
-     - channel: 178
+      - channel: 178
         name: PAR64_174_cto
         transition: 0
         type: dimmer
-     - channel: 179
+      - channel: 179
         name: PAR64_174_shutter
         transition: 0
         type: dimmer
-     - channel: 180
+      - channel: 180
         name: PAR64_174_func
         transition: 0
         type: binary
-     - channel: 181
+      - channel: 181
         name: PAR64_174_dimmer
         transition: 0
         type: dimmer
-     - channel: 182
+      - channel: 182
         name: PAR64_182_rgbw
         transition: 0
         type: rgbw
-     - channel: 186
+      - channel: 186
         name: PAR64_182_cto
         transition: 0
         type: dimmer
-     - channel: 187
+      - channel: 187
         name: PAR64_182_shutter
         transition: 0
         type: dimmer
-     - channel: 188
+      - channel: 188
         name: PAR64_182_func
         transition: 0
         type: binary
-     - channel: 189
+      - channel: 189
         name: PAR64_182_dimmer
         transition: 0
         type: dimmer
-     - channel: 190
+      - channel: 190
         name: PAR64_190_rgbw
         transition: 0
         type: rgbw
-     - channel: 194
+      - channel: 194
         name: PAR64_190_cto
         transition: 0
         type: dimmer
-     - channel: 195
+      - channel: 195
         name: PAR64_190_shutter
         transition: 0
         type: dimmer
-     - channel: 196
+      - channel: 196
         name: PAR64_190_func
         transition: 0
         type: binary
-     - channel: 197
+      - channel: 197
         name: PAR64_190_dimmer
         transition: 0
         type: dimmer
-     - channel: 200
+      - channel: 200
         name: W648_200_dimmer
         transition: 0
         type: dimmer
-     - channel: 201
+      - channel: 201
         name: W648_200_shutter
         transition: 0
         type: dimmer
-     - channel: 202
+      - channel: 202
         name: W648_200_rgb
         transition: 0
         type: rgb
-     - channel: 205
+      - channel: 205
         name: W648_200_function
         transition: 0
         type: binary
-     - channel: 206
+      - channel: 206
         name: W648_206_dimmer
         transition: 0
         type: dimmer
-     - channel: 207
+      - channel: 207
         name: W648_206_shutter
         transition: 0
         type: dimmer
-     - channel: 208
+      - channel: 208
         name: W648_206_rgb
         transition: 0
         type: rgb
-     - channel: 211
+      - channel: 211
         name: W648_206_function
         transition: 0
         type: binary
-     - channel: 212
+      - channel: 212
         name: W648_212_dimmer
         transition: 0
         type: dimmer
-     - channel: 213
+      - channel: 213
         name: W648_212_shutter
         transition: 0
         type: dimmer
-     - channel: 214
+      - channel: 214
         name: W648_212_rgb
         transition: 0
         type: rgb
-     - channel: 217
+      - channel: 217
         name: W648_212_function
         transition: 0
         type: binary
-     - channel: 218
+      - channel: 218
         name: W648_218_dimmer
         transition: 0
         type: dimmer
-     - channel: 219
+      - channel: 219
         name: W648_218_shutter
         transition: 0
         type: dimmer
-     - channel: 220
+      - channel: 220
         name: W648_218_rgb
         transition: 0
         type: rgb
-     - channel: 223
+      - channel: 223
         name: W648_218_function
         transition: 0
         type: binary
-     - channel: 224
+      - channel: 224
         name: W648_224_dimmer
         transition: 0
         type: dimmer
-     - channel: 225
+      - channel: 225
         name: W648_224_shutter
         transition: 0
         type: dimmer
-     - channel: 226
+      - channel: 226
         name: W648_224_rgb
         transition: 0
         type: rgb
-     - channel: 229
+      - channel: 229
         name: W648_224_function
         transition: 0
         type: binary
-     - channel: 230
+      - channel: 230
         name: PAR64_230_rgbw
         transition: 0
         type: rgbw
-     - channel: 234
+      - channel: 234
         name: PAR64_230_cto
         transition: 0
         type: dimmer
-     - channel: 235
+      - channel: 235
         name: PAR64_230_shutter
         transition: 0
         type: dimmer
-     - channel: 236
+      - channel: 236
         name: PAR64_230_func
         transition: 0
         type: binary
-     - channel: 237
+      - channel: 237
         name: PAR64_230_dimmer
         transition: 0
         type: dimmer
-     - channel: 238
+      - channel: 238
         name: PAR64_238_rgbw
         transition: 0
         type: rgbw
-     - channel: 242
+      - channel: 242
         name: PAR64_238_cto
         transition: 0
         type: dimmer
-     - channel: 243
+      - channel: 243
         name: PAR64_238_shutter
         transition: 0
         type: dimmer
-     - channel: 244
+      - channel: 244
         name: PAR64_238_func
         transition: 0
         type: binary
-     - channel: 245
+      - channel: 245
         name: PAR64_238_dimmer
         transition: 0
         type: dimmer
-     - channel: 246
+      - channel: 246
         name: PAR64_246_rgbw
         transition: 0
         type: rgbw
-     - channel: 250
+      - channel: 250
         name: PAR64_246_cto
         transition: 0
         type: dimmer
-     - channel: 251
+      - channel: 251
         name: PAR64_246_shutter
         transition: 0
         type: dimmer
-     - channel: 252
+      - channel: 252
         name: PAR64_246_func
         transition: 0
         type: binary
-     - channel: 253
+      - channel: 253
         name: PAR64_246_dimmer
         transition: 0
         type: dimmer
-     - channel: 254
+      - channel: 254
         name: PAR64_254_rgbw
         transition: 0
         type: rgbw
-     - channel: 258
+      - channel: 258
         name: PAR64_254_cto
         transition: 0
         type: dimmer
-     - channel: 259
+      - channel: 259
         name: PAR64_254_shutter
         transition: 0
         type: dimmer
-     - channel: 260
+      - channel: 260
         name: PAR64_254_func
         transition: 0
         type: binary
-     - channel: 261
+      - channel: 261
         name: PAR64_254_dimmer
         transition: 0
         type: dimmer
