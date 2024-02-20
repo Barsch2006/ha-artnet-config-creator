@@ -8,6 +8,13 @@ interface ICWWW {
   };
 }
 
+interface IRevueLED {
+  channels: {
+    dimmer: number;
+    strobe: number;
+  };
+}
+
 interface IMHX200 {
   channels: {
     pan: number;
@@ -84,7 +91,8 @@ type FixtureType =
   | "MHX200"
   | "MHZ1915"
   | "PAR64"
-  | "W648";
+  | "W648"
+  | "RevueLED";
 type YAMLChannelType = "dimmer" | "binary" | "rgb" | "rgbw" | "color_temp";
 /**
  * @typedef {string} YAMLChannelName - The name of the channel
@@ -223,7 +231,7 @@ class MHX200 extends Fixture implements IMHX200 {
       `     - channel: ${this.startDMX + 5}
         name: MHX200_${this.startDMX}_color
         transition: 0
-        type: dimmer`,  
+        type: dimmer`,
       `     - channel: ${this.startDMX + 6}
         name: MHX200_${this.startDMX}_shutter
         transition: 0
@@ -255,13 +263,37 @@ class MHX200 extends Fixture implements IMHX200 {
       `     - channel: ${this.startDMX + 13}
         name: MHX200_${this.startDMX}_prism
         transition: 0
-        type: dimmer`,  
+        type: dimmer`,
       `     - channel: ${this.startDMX + 14}
         name: MHX200_${this.startDMX}_function
         transition: 0
         type: dimmer`,
       `     - channel: ${this.startDMX + 15}
         name: MHX200_${this.startDMX}_effect
+        transition: 0
+        type: dimmer`,
+    ];
+  }
+}
+
+class RevueLED extends Fixture implements IRevueLED {
+  channels = {
+    dimmer: 0,
+    strobe: 0,
+  };
+
+  constructor(startDMX: number) {
+    super(startDMX, "RevueLED");
+  }
+
+  toYAML(): YAMLChannel[] {
+    return [
+      `     - channel: ${this.startDMX}
+        name: RevueLED_${this.startDMX}_dimmer
+        transition: 0
+        type: dimmer`,
+      `     - channel: ${this.startDMX + 1}
+        name: RevueLED_${this.startDMX}_strobe
         transition: 0
         type: dimmer`,
     ];
@@ -361,7 +393,7 @@ class PAR64 extends Fixture implements IPAR64 {
       `     - channel: ${this.startDMX}
         name: PAR64_${this.startDMX}_rgbw
         transition: 0
-        type: rgbw`,  
+        type: rgbw`,
       `     - channel: ${this.startDMX + 4}
         name: PAR64_${this.startDMX}_cto
         transition: 0
@@ -397,7 +429,7 @@ class W648 extends Fixture implements IW648 {
   }
 
   toYAML(): YAMLChannel[] {
-    return [  
+    return [
       `     - channel: ${this.startDMX}
         name: W648_${this.startDMX}_dimmer
         transition: 0
@@ -433,4 +465,6 @@ export {
   MHZ1915,
   PAR64,
   W648,
+  RevueLED,
+  IRevueLED,
 };

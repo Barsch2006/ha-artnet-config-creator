@@ -277,6 +277,14 @@ light:
         name: MHZ1915_61_move_effect
         transition: 0
         type: dimmer
+      - channel: 76
+        name: RevueLED_76_dimmer
+        transition: 0
+        type: dimmer
+      - channel: 77
+        name: RevueLED_76_strobe
+        transition: 0
+        type: dimmer
       - channel: 100
         name: CWWW_100_cwww
         transition: 0
@@ -307,6 +315,14 @@ light:
         type: dimmer
       - channel: 109
         name: CWWW_105_color_temp
+        transition: 0
+        type: dimmer
+      - channel: 132
+        name: RevueLED_132_dimmer
+        transition: 0
+        type: dimmer
+      - channel: 133
+        name: RevueLED_132_strobe
         transition: 0
         type: dimmer
       - channel: 134

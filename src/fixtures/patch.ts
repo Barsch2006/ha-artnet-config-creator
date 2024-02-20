@@ -4,6 +4,7 @@ import {
   MHX200,
   MHZ1915,
   PAR64,
+  RevueLED,
   SingleChannel,
   W648,
 } from "./types";
@@ -60,6 +61,9 @@ const patchArray: Fixture[] = [
   new PAR64(230),
   new PAR64(238),
   new PAR64(254),
+  // 2 RevueLED
+  new RevueLED(76),
+  new RevueLED(132),
 ];
 
 export default patchArray;
